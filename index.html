@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">    
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITLE</title>
+    
+</head>
+<body>
+  
+    <section>
+        <form action="/submit" method="POST">
+            <div class="wrap">
+             <h1>RICE VARIETY PREDICTION FOR YOUR LOCATION AND SEASON</h1>
+             
+             <div class="inp">
+                 <label for="">Zone</label>
+                 <select id="Zone" name="Zone" class="select-box1" onchange="selected('.select-box1','.select-box2',districts)" required>
+                     <option value="none">-none-</option>
+                 </select>
+             </div>
+             <div class="inp">
+                 <label for="">District</label>
+                 <select id="District" name="District" class="select-box2" onchange="selected('.select-box2','.select-box3',season)" required>
+                     <option value="none">-none-</option>
+                 </select>
+             </div>
+             <div class="inp">
+                 <label for="">Season</label>
+                 <select id="Season" name="Season" class="select-box3" required>
+                     <option value="none">-none-</option>
+                 </select>
+             </div>
+             <body>
+                 
+               
+            </body>
+            <body>
+                <h2>
+                    {{ variety }}
+                </h2>
+               
+            </body>
+ 
+             
+             <button type="submit">submit</button>
+            </div>
+           
+          
+        </form>
+    </section>
+    
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'script/script.js') }}">
+
+    </script>    
+</body>
+
+
+</html>
